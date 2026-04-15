@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barangay 170 Deparo 2 – Caloocan City</title>
+  <link rel="icon" href="logo.jpg">
+  <meta property="og:title" content="Barangay 170 – Deparo 2, Caloocan City">
+  <meta property="og:description" content="Official website of Barangay 170 Deparo 2, Caloocan City. Stay informed, stay connected.">
+  <meta property="og:image" content="hero-bg.jpg">
+  <meta property="og:type" content="website">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── TUTORIAL MODAL ─────────────────────────────────────── -->
+<div id="tutorialModal" class="tutorial-wrap">
+  <div class="tutorial-box">
+    <button class="tutorial-skip" id="tutorialSkip">Skip</button>
+
+    <div class="tutorial-slides">
+
+      <!-- Slide 1 -->
+      <div class="tut-slide active" data-slide="1">
+        <div class="tut-icon">🏙️</div>
+        <h3 class="tut-title">Welcome to Barangay 170!</h3>
+        <p class="tut-desc">This is the official website of Barangay 170 Deparo 2, Caloocan City. Here's a quick guide to help you get around.</p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="tut-slide" data-slide="2">
+        <div class="tut-icon">📅</div>
+        <h3 class="tut-title">View Events & Programs</h3>
+        <p class="tut-desc">Go to the <strong>Events</strong> section to see upcoming barangay activities. Tap <em>"View Details"</em> on any event card for more information.</p>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="tut-slide" data-slide="3">
+        <div class="tut-icon">📢</div>
+        <h3 class="tut-title">Read Announcements</h3>
+        <p class="tut-desc">The <strong>Announcements</strong> section has the latest notices and updates from the Barangay 170 office.</p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="tut-slide" data-slide="4">
+        <div class="tut-icon">🖼️</div>
+        <h3 class="tut-title">Browse the Gallery</h3>
+        <p class="tut-desc">See photos from past events in the <strong>Gallery</strong>. Tap any photo to view it in full screen, and use the arrows to browse.</p>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="tut-slide" data-slide="5">
+        <div class="tut-icon">📞</div>
+        <h3 class="tut-title">Contact the Barangay</h3>
+        <p class="tut-desc">Need help? Scroll to the <strong>Contact</strong> section at the bottom. You'll find our phone numbers and email address there.</p>
+      </div>
+
+    </div><!-- /tutorial-slides -->
+
+    <div class="tut-footer">
+      <div class="tut-dots" id="tutDots">
+        <span class="tut-dot active"></span>
+        <span class="tut-dot"></span>
+        <span class="tut-dot"></span>
+        <span class="tut-dot"></span>
+        <span class="tut-dot"></span>
+      </div>
+      <div class="tut-nav">
+        <button class="tut-btn-ghost" id="tutPrev">Back</button>
+        <button class="tut-btn-primary" id="tutNext">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Help Button (always visible) -->
+<button class="help-btn" id="helpBtn" aria-label="Open tutorial">?</button>
+
+
+<!-- ── NAVBAR ─────────────────────────────────────────────── -->
+<nav class="site-nav" id="navbar">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="#">
+      <div class="brand-seal">
+        <img src="logo.jpg" alt="Brgy 170 Seal" class="seal-img"
+             onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Seal_of_Caloocan.svg/240px-Seal_of_Caloocan.svg.png'">
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Barangay 170</span>
+        <span class="brand-loc">Deparo 2, Caloocan City</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-menu" id="navMenu">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#officials">Officials</a>
+      <a class="nav-link" href="#events">Events</a>
+      <a class="nav-link" href="#announcements">Announcements</a>
+      <a class="nav-link" href="#gallery">Gallery</a>
+      <a class="nav-link" href="#contact">Contact</a>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ── HERO ───────────────────────────────────────────────── -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-pip"></span>
+      Barangay 170 · Deparo 2
+      <span class="eyebrow-pip"></span>
+    </div>
+    <h1 class="hero-title">
+      <em class="ht-light">Serving</em>
+      <span class="ht-bold">Connecting</span>
+      <span class="ht-bold ht-accent">Our Community</span>
+    </h1>
+    <p class="hero-desc">Caloocan City — Stay informed, stay connected.</p>
+    <div class="hero-ctas">
+      <a href="#events" class="cta-primary">View Events</a>
+      <a href="#announcements" class="cta-ghost">Announcements</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+
+<!-- ── ABOUT ──────────────────────────────────────────────── -->
+<section id="about" class="section sec-light">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-lg-2">
+        <div class="img-frame fade-up">
+          <img src="hero-bg.jpg" alt="Barangay 170"
+               onerror="this.src='https://placehold.co/640x500/e87c1e/fff?text=Barangay+170'">
+          <div class="img-badge">
+            <span>🏙️</span>
+            <div>
+              <b>Deparo 2</b>
+              <small>North Caloocan</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <span class="sec-label">About Our Barangay</span>
+        <h2 class="sec-title">A Thriving Community in the Heart of Caloocan</h2>
+        <p class="sec-para">Barangay 170 lies within the Deparo zone of North Caloocan's 2nd District, contributing to one of the area's largest and most active residential communities.</p>
+        <p class="sec-para">The barangay features local schools, small businesses, and neighborhood organizations that keep the community engaged and connected. Its position near the Caloocan–Valenzuela boundary gives residents access to services and employment opportunities in both cities.</p>
+        <div class="stat-strip">
+          <div class="stat-cell"><span class="stat-n">170</span><span class="stat-l">Barangay No.</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-cell"><span class="stat-n">2nd</span><span class="stat-l">District</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-cell"><span class="stat-n">2026</span><span class="stat-l">Year Active</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── OFFICIALS ──────────────────────────────────────────── -->
+<section id="officials" class="section sec-tint">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">Our Leaders</span>
+      <h2 class="sec-title">Barangay Officials</h2>
+      <p class="sec-sub">Meet the dedicated officials serving Barangay 170 Deparo 2.</p>
+    </div>
+    <div class="officials-frame fade-up">
+      <img src="balik-skwela.png" alt="SK Chair L.A Bautista and Council"
+           onerror="this.src='https://placehold.co/900x520/e87c1e/fff?text=Barangay+Officials'">
+      <div class="officials-cap">Balik Skwela — Handog ni SK Chair L.A. Bautista and Council</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── EVENTS ─────────────────────────────────────────────── -->
+<section id="events" class="section sec-light">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">What's Happening</span>
+      <h2 class="sec-title">Events &amp; Programs</h2>
+      <p class="sec-sub">Join us for community activities and celebrations.</p>
+    </div>
+    <div id="eventGrid" class="event-grid"></div>
+  </div>
+</section>
+
+<!-- Event Modal -->
+<div id="eventModal" class="modal-wrap" hidden>
+  <div class="modal-box">
+    <div class="modal-head">
+      <button class="modal-close" id="modalClose">✕</button>
+      <p class="modal-date" id="modalDate"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-loc" id="modalLoc"></p>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <a id="modalFbBtn" class="modal-fb-btn" href="#" target="_blank" rel="noopener" style="display:none;">
+        📘 See post on Facebook
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── ANNOUNCEMENTS ──────────────────────────────────────── -->
+<section id="announcements" class="section sec-tint">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">Latest Updates</span>
+      <h2 class="sec-title">Announcements</h2>
+      <p class="sec-sub">Important notices from the Barangay 170 office.</p>
+    </div>
+    <div id="annList" class="ann-list"></div>
+  </div>
+</section>
+
+
+<!-- ── GALLERY ────────────────────────────────────────────── -->
+<section id="gallery" class="section sec-light">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">Memories</span>
+      <h2 class="sec-title">Photo Gallery</h2>
+      <p class="sec-sub">A glimpse of our community in action.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gal-item fade-up" style="--d:0s"
+           data-src="cash-assistance.png"
+           data-caption="Educational Cash Assistance — SK Brgy 170">
+        <div class="gal-img-wrap">
+          <img src="cash-assistance.png" alt="Educational Cash Assistance">
+        </div>
+        <div class="gal-info">
+          <span class="gal-tag">SK Program</span>
+          <p class="gal-name">Educational Cash Assistance</p>
+        </div>
+      </div>
+
+      <div class="gal-item fade-up" style="--d:.08s"
+           data-src="womens-month.png"
+           data-caption="Women's Month Celebration — Brgy 170">
+        <div class="gal-img-wrap">
+          <img src="womens-month.png" alt="Women's Month Celebration">
+        </div>
+        <div class="gal-info">
+          <span class="gal-tag">Community</span>
+          <p class="gal-name">Women's Month Celebration</p>
+        </div>
+      </div>
+
+      <div class="gal-item fade-up" style="--d:.16s"
+           data-src="basketball-team.jpg"
+           data-caption="Team LA Basketball Champions — Brgy 170">
+        <div class="gal-img-wrap">
+          <img src="lbasketball-team.jpg" alt="Team LA Basketball">
+        </div>
+        <div class="gal-info">
+          <span class="gal-tag">Sports</span>
+          <p class="gal-name">Team LA Basketball Champions</p>
+        </div>
+      </div>
+
+      <div class="gal-item gal-wide fade-up" style="--d:.24s"
+           data-src="linggo-kabataan.png"
+           data-caption="Linggo ng Kabataan 2025 — Brgy 170">
+        <div class="gal-img-wrap">
+          <img src="inggo-kabataan.png" alt="Linggo ng Kabataan 2025">
+        </div>
+        <div class="gal-info">
+          <span class="gal-tag">Youth Event</span>
+          <p class="gal-name">Linggo ng Kabataan 2025</p>
+        </div>
+      </div>
+
+      <div class="gal-item fade-up" style="--d:.32s"
+           data-src="basketball-finals.png"
+           data-caption="Barangay 170 Basketball — Finals Bound! 🏀">
+        <div class="gal-img-wrap">
+          <img src="basketball-finals.png" alt="Basketball Finals">
+        </div>
+        <div class="gal-info">
+          <span class="gal-tag">Sports</span>
+          <p class="gal-name">Basketball Finals Bound! 🏀</p>
+        </div>
+      </div>
+
+    </div><!-- /gallery-grid -->
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" hidden>
+      <div class="lb-backdrop" id="lbBackdrop"></div>
+      <button class="lb-close" id="lbClose">✕</button>
+      <button class="lb-arrow lb-prev" id="lbPrev">‹</button>
+      <button class="lb-arrow lb-next" id="lbNext">›</button>
+      <div class="lb-stage">
+        <img id="lbImg" src="" alt="">
+        <p id="lbCaption" class="lb-caption"></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── CONTACT ────────────────────────────────────────────── -->
+<section id="contact" class="section sec-tint">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">Get in Touch</span>
+      <h2 class="sec-title">Contact Us</h2>
+      <p class="sec-sub">Have questions or concerns? Reach out to the Barangay 170 office directly.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Contact info cards -->
+      <div class="contact-info-col fade-up">
+
+        <div class="contact-info-card">
+          <div class="cic-icon">📞</div>
+          <div class="cic-content">
+            <div class="cic-label">Phone</div>
+            <div class="cic-val">0945 507 4779</div>
+            <div class="cic-val">0949 333 2504</div>
+          </div>
+          <a href="tel:09455074779" class="cic-action">Call</a>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="cic-icon">📧</div>
+          <div class="cic-content">
+            <div class="cic-label">Email</div>
+            <div class="cic-val">barangay170@gmail.com</div>
+            <div class="cic-val cic-val-sm">sangguniangkabataan170@gmail.com</div>
+          </div>
+          <a href="mailto:barangay170@gmail.com" class="cic-action">Email</a>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="cic-icon">📍</div>
+          <div class="cic-content">
+            <div class="cic-label">Address</div>
+            <div class="cic-val">Barangay 170 Deparo 2</div>
+            <div class="cic-val">Caloocan City, Metro Manila</div>
+          </div>
+        </div>
+
+        <div class="contact-hours-card">
+          <div class="ch-title">🕐 Office Hours</div>
+          <div class="ch-row"><span>Monday – Friday</span><span class="ch-time">8:00 AM – 5:00 PM</span></div>
+          <div class="ch-row"><span>Saturday</span><span class="ch-time">8:00 AM – 12:00 PM</span></div>
+          <div class="ch-row ch-closed"><span>Sunday &amp; Holidays</span><span class="ch-time">Closed</span></div>
+        </div>
+
+      </div>
+
+      <!-- Map + FB CTA -->
+      <div class="contact-map-col fade-up" style="--d:.12s">
+
+        <!-- Clickable map that opens Google Maps pinned location -->
+        <a
+          href="https://www.google.com/maps/place/Barangay+170,+Deparo+2,+Caloocan,+Metro+Manila/@14.7496,120.9834,17z"
+          target="_blank"
+          rel="noopener"
+          class="map-card map-card-link"
+          title="Open in Google Maps"
+        >
+          <img src="brgy-map.png" alt="Barangay 170 Map"
+               onerror="this.src='https://placehold.co/560x260/1a0f00/e87c1e?text=Map+of+Brgy+170'">
+          <div class="map-label">📍 Barangay 170, Deparo 2, Caloocan City &nbsp;— <span class="map-open-hint">Open in Google Maps ↗</span></div>
+        </a>
+
+        <div class="fb-cta-box">
+          <div class="fcb-text">
+            <strong>Follow us on Facebook</strong>
+            <p>Get real-time updates, event announcements, and community news.</p>
+          </div>
+          <a href="https://www.facebook.com/profile.php?id=100092608331201" target="_blank" rel="noopener" class="cta-fb">
+            👍 Visit our Facebook Page
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo.jpg" alt="Seal" class="footer-seal" onerror="this.style.display='none'">
+      <div>
+        <span class="footer-name">Barangay 170</span>
+        <span class="footer-loc">Deparo 2, Caloocan City</span>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Barangay 170 · Serving our community with pride 🧡</p>
+    <a href="https://www.facebook.com/profile.php?id=100092608331201" target="_blank" rel="noopener" class="footer-social">Facebook</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
